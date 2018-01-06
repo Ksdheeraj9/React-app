@@ -6,3 +6,12 @@ Clone the repository and then run the following commands in your command prompt:
 1) cd react-app //or to the file directory
 2) npm install
 3) npm run
+
+
+
+
+
+
+
+
+
