@@ -155,7 +155,7 @@ export class AppComponent extends Component{
                   : null
               }
             </article>
-              <h6 className="text-center">International Trade Flows <span>{state.selected_year}</span></h6>
+              <h6 className="text-center"> Trade Flow for the year: <span>{state.selected_year}</span></h6>
           </div>
            <aside className="large-3 small-4 columns">
           <h5>Filters</h5>
