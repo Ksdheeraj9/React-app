@@ -16,4 +16,5 @@ Clone the repository and then run the following commands in your command prompt:
 
 
 Note: Inspired from the chord diagem develope by delimited.io
+
 link for the actual one: http://www.delimited.io/blog/2014/11/18/interactive-chord-diagrams-in-d3
