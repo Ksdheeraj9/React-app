@@ -17,7 +17,7 @@ export class AppComponent extends Component{
       qFormat       : d3.format(",.0f")
   };
 
-    this.importCSV      = this.importCSV.bind(this);
+    this.importJSON      = this.importJSON.bind(this);
     this.addFilter      = this.addFilter.bind(this);
     this.update         = this.update.bind(this);
     this.updateTooltip  = this.updateTooltip.bind(this);
@@ -64,10 +64,10 @@ export class AppComponent extends Component{
     }
   };
 
-  importCSV = () => {
+  importJSON() {
     let state = this.state;
     let _this = this;
-    d3.csv('../../assets/trade.csv', function (err, data) {
+    d3.json('https://api.myjson.com/bins/sn97t', function (err, data) {
       data.forEach(function (d) {
         d.year  = +d.year;
         d.flow1 = +d.flow1;
@@ -83,7 +83,6 @@ export class AppComponent extends Component{
       _this.update(state);
     });
   };
-
   setFilters(item, input){
     let state = this.state;
     state.filters[item.name] = {
@@ -122,7 +121,7 @@ export class AppComponent extends Component{
     this.setState({
       isComponentMount: true
     });
-    this.importCSV();
+    this.importJSON();
     $("#year_2005").trigger("click");
   }
 
